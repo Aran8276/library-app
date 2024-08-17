@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\HomeController;
@@ -15,8 +14,8 @@ use App\Http\Middleware\CheckIsAdminRoleMiddleware;
 
 // Home routes
 Route::get('/', [BookController::class, 'index'])->name('home');
-Route::get('/contact', fn () => view('contact'))->name('contact');
-Route::get('/about', fn () => view('about'))->name('about');
+Route::get('/contact', fn() => view('static.contact'))->name('contact');
+Route::get('/about', fn() => view('static.about'))->name('about');
 
 // Book routes
 Route::prefix('/book')->group(function () {
@@ -39,25 +38,31 @@ Route::prefix('/auth')->group(function () {
 });
 
 // Redirects for login and register
-Route::get('/login', fn () => redirect()->to('/auth/login'));
-Route::get('/register', fn () => redirect()->to('/auth/register'));
+Route::get('/login', fn() => redirect()->to('/auth/login'));
+Route::get('/register', fn() => redirect()->to('/auth/register'));
+Route::get('/signin', fn() => redirect()->to('/auth/login'));
+Route::get('/signup', fn() => redirect()->to('/auth/register'));
 
 // Search route
 Route::get('/search', [BookController::class, 'search']);
 
-// Testing routes
-Route::prefix('/testing')->group(function () {
-    Route::controller(HomeController::class)->group(function () {
-        Route::get('/json', 'requestJson');
-        Route::get('/arrayjson', 'requestArray');
-        Route::get('/hellofunc', 'view');
-        Route::get('/redirect', 'redirect');
-        Route::get('/env', 'envTest');
-        Route::get('/querybuilder', 'index');
-    });
-});
+// Testing routes (Recommended to be closed during production)
+// Route::prefix('/testing')->group(function () {
+//     Route::controller(HomeController::class)->group(function () {
+//         // Route::get('/json', 'requestJson');
+//         // Route::get('/arrayjson', 'requestArray');
+//         // Route::get('/hellofunc', 'view');
+//         // Route::get('/redirect', 'redirect');
+//         // Route::get('/env', 'envTest');
+//         // Route::get('/querybuilder', 'index');
+//         Route::get('/remember', 'remember');
+//         Route::get('/view', function () {
+//             return view('test');
+//         });
+//     });
+// });
 
-// Middleware-protected routes
+// Middleware-protected routes (*cough *cough wp-admin)
 Route::middleware(CheckAuthMiddleware::class)->group(function () {
     Route::controller(BookController::class)->group(function () {
         Route::get('/create-book', 'indexCreate');

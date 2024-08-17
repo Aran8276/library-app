@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('email', 150)->unique();
             $table->string('password', 150);
             $table->boolean('isadmin')->default(false);
+            $table->rememberToken()->nullable(true);
             $table->timestamps();
         });
 

@@ -23,6 +23,6 @@ class ProfileController extends Controller
         $description = $data->author_description;
         $src = $data->author_profile_src;
 
-        return view('profile', compact('firstName', 'lastName', 'username', 'description', 'src', 'id'));
+        return view('users.profile', compact('firstName', 'lastName', 'username', 'description', 'src', 'id'));
     }
 }

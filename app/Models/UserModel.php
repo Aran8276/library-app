@@ -52,6 +52,12 @@ class UserModel extends Authenticatable
         return $user;
     }
 
+    public static function getUserByUsername(string $username)
+    {
+        $user = self::where('username', $username)->first(); // $user = UserModel::where('email', $email)->first(); (dimana 'self' adalah UserModel (file sendiri))
+        return $user;
+    }
+
     public function id()
     {
         return $this->getRawOriginal('id');

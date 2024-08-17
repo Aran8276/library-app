@@ -14,19 +14,25 @@ class LoginController extends Controller
 {
     public function index()
     {
-        return view('login');
+        return view('auth.login');
     }
 
     public function action(LoginRequest $request)
     {
         $credentials = array(
-            'email' => $request->input('email'),
-            'password' => $request->input('password')
+            'username' => $request->input('username'),
+            'password' => $request->input('password'),
+            'is_remember' => $request->input('remember')
         );
 
-        $user = UserModel::getUserByEmail($credentials['email']);
+        $user = UserModel::getUserByUsername($credentials['username']);
 
         if ($user && Hash::check($credentials['password'], $user->password)) {
+
+            if ($credentials['is_remember'] == 'on') {
+                Auth::login($user, $remember = true);
+                return redirect('/');
+            }
             Auth::login($user);
             return redirect('/');
         }

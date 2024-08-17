@@ -79,6 +79,15 @@ class HomeController extends Controller
         // return "requestJson";
     }
 
+    public function remember()
+    {
+        if (Auth::viaRemember()) {
+            return "true";
+        }
+
+        return "false";
+    }
+
     public function requestArray()
     {
         $data = array("array_1", "array_2", "array_3", "array_4", "array_5");

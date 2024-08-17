@@ -24,7 +24,7 @@ class SettingsController extends Controller
         $description = $data->author_description;
         $src = $data->author_profile_src;
 
-        return view('profile-edit', compact('firstName', 'lastName', 'username', 'description', 'email', 'src', 'id'));
+        return view('users.profile-edit', compact('firstName', 'lastName', 'username', 'description', 'email', 'src', 'id'));
     }
 
     public function updateProfile(EditRequest $request)

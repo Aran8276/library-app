@@ -27,12 +27,12 @@ class BookController extends Controller
         // return $data->book_id;
 
         // return $data->book_author_id;
-        return view('book', compact('data', 'id', 'author_data'));
+        return view('dynamic.book', compact('data', 'id', 'author_data'));
     }
 
     public function indexCreate()
     {
-        return view('book-create');
+        return view('form.book-create');
     }
 
     public function store(BookSubmissionRequest $request)
@@ -69,7 +69,7 @@ class BookController extends Controller
 
         // return response()->json($data);
 
-        return view('search', compact('data', 'search_query'));
+        return view('dynamic.search', compact('data', 'search_query'));
     }
 
     public function edit($id)
@@ -78,7 +78,7 @@ class BookController extends Controller
 
         if (BookModel::where('book_id', $id)->where('book_author_id', $author_id)->first()) {
             $data = BookModel::where('book_id', $id)->first();
-            return view('book-edit', compact('data'));
+            return view('form.book-edit', compact('data'));
         }
         return abort(404);
     }
@@ -124,6 +124,6 @@ class BookController extends Controller
         $author_id = Auth::user()->getRawOriginal('id');
         $data = BookModel::where('book_author_id', $author_id)->get();
 
-        return view('manager', compact('data'));
+        return view('users.manager', compact('data'));
     }
 }

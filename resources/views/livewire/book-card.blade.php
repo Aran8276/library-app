@@ -1,5 +1,5 @@
 <a wire:navigate href="{{ $href }}"
-    class="flex justify-center items-center shadow-lg p-6 border-[1px] rounded-2xl hover:scale-[1.09] transition ease-in-out delay-150">
+    class="flex justify-center items-center shadow-lg p-6 rounded-lg border border-neutral-200/60  hover:scale-[1.09] transition ease-in-out delay-150">
     <script>
         function standby(event) {
             event.target.src = '/book-placeholder.svg'

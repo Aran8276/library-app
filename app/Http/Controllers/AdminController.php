@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\BookModel;
+use App\Models\UserModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -11,20 +12,21 @@ class AdminController extends Controller
     public function index()
     {
         $data = BookModel::all();
+        $user_data = UserModel::all();
 
-        return view('manager-admin', compact('data'));
+        return view('admin.manager-admin', compact('data', 'user_data'));
     }
 
     public function indexCreate()
     {
-        return view('book-create');
+        return view('form.book-create');
     }
 
     public function edit($id)
     {
         if (BookModel::where('book_id', $id)->first()) {
             $data = BookModel::where('book_id', $id)->first();
-            return view('book-edit-admin', compact('data'));
+            return view('admin.book-edit-admin', compact('data'));
         }
 
         return abort(404);
