@@ -45,7 +45,7 @@ Proyek ini adalah sebuah website perpustakaan yang dibangun menggunakan Laravel.
     ```bash
     php artisan key:generate
     ```
-7. Jalankan server MySQL
+7. Jalankan server MySQL.
 
 9. Migrasi database:
     ```bash
