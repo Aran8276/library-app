@@ -50,10 +50,24 @@ class BookController extends Controller
                 'book_description' => $request->input('bookDescription'),
                 'book_author_id' => $author_id,
             );
+            BookModel::create($data);
+            return redirect()->route('home')->with('message', 'Book added successfully!');
         }
 
-        BookModel::create($data);
+        $profileImagePath = "null";
+        $author_id = Auth::user()->getRawOriginal('id');
+        $id = Str::uuid();
+        $data = array(
+            'book_id' => $id,
+            'book_content_1' => $request->input('bookContent1'),
+            'book_content_2' => $request->input('bookContent2'),
+            'book_cover_src' => $profileImagePath,                            /// change model book_cover_src db to optional
+            'book_name' => $request->input('bookName'),
+            'book_description' => $request->input('bookDescription'),
+            'book_author_id' => $author_id,
+        );
 
+        BookModel::create($data);
         return redirect()->route('home')->with('message', 'Book added successfully!');
     }
 
