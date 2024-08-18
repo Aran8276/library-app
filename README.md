@@ -58,7 +58,11 @@ Proyek ini adalah sebuah website perpustakaan yang dibangun menggunakan Laravel.
     ```bash
     php artisan serve
     ```
-2. Buka browser dan akses `http://localhost:8000`.
+2. Jalankan server pengembangan npm untuk CSS:
+   ```bash
+   npm run dev
+   ``` 
+3. Buka browser dan akses `http://localhost:8000`.
 
 ## Kontribusi
 
