@@ -58,7 +58,7 @@ Proyek ini adalah sebuah website perpustakaan yang dibangun menggunakan Laravel.
     ```bash
     php artisan serve
     ```
-2. Jalankan server pengembangan npm untuk CSS:
+2. Jalankan server pengembangan Vite untuk CSS:
    ```bash
    npm run dev
    ``` 
