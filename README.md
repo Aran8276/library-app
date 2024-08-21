@@ -58,7 +58,7 @@ Proyek ini adalah sebuah website perpustakaan yang dibangun menggunakan Laravel.
     ```bash
     php artisan serve
     ```
-2. Jalankan proses pembuatan asset Vite / Node.je untuk TailwindCSS:
+2. Jalankan proses pembuatan asset Vite / Node.js untuk TailwindCSS:
    ```bash
    npm run build
    ``` 
