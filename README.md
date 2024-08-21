@@ -58,9 +58,9 @@ Proyek ini adalah sebuah website perpustakaan yang dibangun menggunakan Laravel.
     ```bash
     php artisan serve
     ```
-2. Jalankan server pengembangan Vite untuk CSS:
+2. Jalankan proses pembuatan asset Vite / Node.je untuk TailwindCSS:
    ```bash
-   npm run dev
+   npm run build
    ``` 
 3. Buka browser dan akses `http://localhost:8000`.
 
