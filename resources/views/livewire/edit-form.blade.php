@@ -17,7 +17,7 @@
                 @csrf
                 @method('PATCH')
                 <div class="flex flex-col space-y-2">
-                    <input type="file" name="author_profile_src" class="w-full" />
+                    <input type="file" accept="image/*" name="author_profile_src" class="w-full" />
                     @error('author_profile_src')
                         <span class="text-sm text-red-600">{{ $message }}</span>
                     @enderror

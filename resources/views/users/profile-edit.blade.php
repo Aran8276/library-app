@@ -41,14 +41,14 @@
                                     Depan</label>
                                 <div class="md:pr-[0.5rem]">
                                     <input name="firstName" id="firstName" placeholder="Fajar"
-                                        class=" flex w-full h-10 px-3 py-2 md:text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"
+                                        class=" flex w-full h-10 px-3 py-2 md:text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all disabled:cursor-not-allowed disabled:opacity-50"
                                         value="{{ "$firstName " }}">
                                 </div>
                                 </input>
                                 <label class="inline text-xl md:hidden" for="lastName">Nama Belakang</label>
                                 <div class="md:pl-[0.5rem]">
                                     <input name="lastName" id="lastName" placeholder="Ihsan"
-                                        class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"
+                                        class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all disabled:cursor-not-allowed disabled:opacity-50"
                                         value="{{ " $lastName" }}">
                                 </div></input>
                             </div>
@@ -61,7 +61,7 @@
                             <div class="flex flex-col space-y-2">
                                 <label class="text-xl md:text-base" for="username">Nama Pengguna</label>
                                 <input placeholder="VioKenceng"
-                                    class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"
+                                    class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all disabled:cursor-not-allowed disabled:opacity-50"
                                     name="username" id="username" value="{{ $username }}">
                                 @error('username')
                                     <span class="text-red-600 text-sm font-bold">{{ $message }}</span>
@@ -78,7 +78,7 @@
                                     }
                                 }" x-init="resize()" @input="resize()" type="text" name="description"
                                     id="description" placeholder="I like cars and nothing else. Perhaps you should like cars too!"
-                                    class="flex w-full h-auto min-h-[160px] max-h-[320px] md:min-h-[80px] md:max-h-[160px] px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-400 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50">{{ $description }}</textarea>
+                                    class="flex w-full h-auto min-h-[160px] max-h-[320px] md:min-h-[80px] md:max-h-[160px] px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-400 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all disabled:cursor-not-allowed disabled:opacity-50">{{ $description }}</textarea>
                             </div>
 
                             <div class="flex flex-col space-y-2 pt-2">
@@ -88,8 +88,8 @@
                                     @csrf
                                     @method('PATCH')
                                     <div class="flex flex-col space-y-2">
-                                        <input type="file" hidden name="author_profile_src" id="fileupload"
-                                            class="w-full" />
+                                        <input type="file" accept="image/*" hidden name="author_profile_src"
+                                            id="fileupload" class="w-full" />
 
                                         <div class="flex flex-col space-y-2 md:w-36">
                                             <label for="fileupload"
@@ -100,7 +100,9 @@
                                                 class="w-full items-center justify-center px-3 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md bg-red-600 hover:bg-red-500 focus:ring-2 focus:ring-offset-2 focus:ring-red-500 focus:shadow-outline focus:outline-none hidden">Batalkan
                                                 Gambar</button>
                                         </div>
-                                        <span id="file-name" class="text-sm text-gray-600">Belum ada file gambar yang
+                                        <span id="file-name" class="text-sm text-gray-600 truncate max-w-full">Belum ada
+                                            file
+                                            gambar yang
                                             dipilih.</span>
 
                                         @error('author_profile_src')

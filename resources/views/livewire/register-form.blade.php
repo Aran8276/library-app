@@ -2,9 +2,9 @@
     @csrf
     <div class="flex space-y-4 md:space-y-0 flex-col md:flex-row md:space-x-4">
         <input type="text" placeholder="Nama Depan" name="firstName"
-            class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50" />
+            class=" flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all disabled:cursor-not-allowed disabled:opacity-50" />
         <input type="text" placeholder="Nama Belakang" name="lastName"
-            class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50" />
+            class=" flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all disabled:cursor-not-allowed disabled:opacity-50" />
     </div>
     @error('firstName')
         <span class="text-red-600 text-sm font-bold">{{ $message }}</span>
@@ -16,7 +16,7 @@
 
     <div>
         <input type="text" placeholder="Nama Pengguna" name="username"
-            class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50" />
+            class=" flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all disabled:cursor-not-allowed disabled:opacity-50" />
     </div>
     @error('username')
         <span class="text-red-600 text-sm font-bold">{{ $message }}</span>
@@ -24,7 +24,7 @@
 
     <div>
         <input type="email" placeholder="Email" name="email"
-            class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50" />
+            class=" flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all disabled:cursor-not-allowed disabled:opacity-50" />
     </div>
     @error('email')
         <span class="text-red-600 text-sm font-bold">{{ $message }}</span>
@@ -32,7 +32,7 @@
 
     <div>
         <input type="password" placeholder="Kata Sandi" name="password"
-            class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50" />
+            class=" flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all disabled:cursor-not-allowed disabled:opacity-50" />
     </div>
     @error('password')
         <span class="text-red-600 text-sm font-bold">{{ $message }}</span>
@@ -41,9 +41,9 @@
     <div class="flex items-center mb-4">
         <input id="policy" required type="checkbox"
             oninvalid="this.setCustomValidity('Silahkan membaca Syarat & Ketentuan sebelum melanjutkan.')"
-            class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-neutral-900 focus:ring-neutral-900">
-        <label for="policy" class="ml-2 text-sm font-medium text-gray-900">Saya telah menyetujui <a wire:navigate
-                class="hover:underline text-blue-500" wire:navigate href="/about#1">Syarat & Ketentuan.</a></label>
+            class="w-4 h-4 transition-all bg-gray-100 border-gray-300 rounded text-neutral-900 focus:ring-neutral-900">
+        <label for="policy" class="ml-2 text-sm font-medium text-gray-900">Saya telah menyetujui <a
+                class="hover:underline text-blue-500" href="/about#1">Syarat & Ketentuan.</a></label>
     </div>
     <div class="w-full pt-4">
         <button type="submit"

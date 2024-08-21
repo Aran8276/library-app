@@ -1,6 +1,6 @@
 <a wire:navigate href="{{ $href }}"
-    class="flex justify-center items-center shadow-lg p-6 rounded-lg border border-neutral-200/60 hover:scale-[1.09] transition ease-in-out delay-150 h-[400px]">
-    <script src="/imgerrorhandler.js"></script>
+    class="flex justify-center items-center shadow-lg px-6 pt-8 rounded-lg border border-neutral-200/60 hover:scale-[1.09] transition ease-in-out delay-150 h-[460px]">
+    <script src="/imgerrhandler.js"></script>
     <div class="flex flex-col w-full h-full space-y-4">
         <div class="w-full h-[250px]">
             <img class="w-full h-full rounded-sm object-contain" src="/storage/{{ $src }}"

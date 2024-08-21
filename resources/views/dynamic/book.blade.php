@@ -49,12 +49,12 @@
                         class="flex flex-col py-4 md:py-0 md:flex-row md:justify-between border-[1px] w-full md:w-[52rem] shadow-lg border-neutral-200/60 rounded-lg h-[59rem] md:h-[28rem]">
                         <div class="flex-1 p-4">
                             <div name="bookContent1"
-                                class="h-[26rem] border border-gray-600 p-4 rounded-lg overflow-scroll resize-none w-full"
+                                class="h-[26rem] border border-gray-600 p-4 rounded-lg overflow-scroll resize-none w-full transition-all focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 "
                                 placeholder="Ketik Konten Kiri Disini">{{ $data ? $data->book_content_1 : '' }}</div>
                         </div>
                         <div class="flex-1 p-4">
                             <div name="bookContent2"
-                                class="h-[26rem] border border-gray-600 p-4 rounded-lg overflow-scroll resize-none w-full"
+                                class="h-[26rem] border border-gray-600 p-4 rounded-lg overflow-scroll resize-none w-full transition-all focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 "
                                 placeholder="Ketik Konten Kanan Disini">{{ $data ? $data->book_content_2 : '' }}</div>
                         </div>
                     </div>

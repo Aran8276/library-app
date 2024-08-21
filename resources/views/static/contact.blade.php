@@ -32,7 +32,7 @@
                                         Depan</label>
                                     <input type="text" name="hs-firstname-hire-us-2" id="hs-firstname-hire-us-2"
                                         placeholder="Selva"
-                                        class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50">
+                                        class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all disabled:cursor-not-allowed disabled:opacity-50">
                                 </div>
 
                                 <div>
@@ -41,7 +41,7 @@
                                         Belakang</label>
                                     <input type="text" name="hs-lastname-hire-us-2" id="hs-lastname-hire-us-2"
                                         placeholder="Vio"
-                                        class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50">
+                                        class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all disabled:cursor-not-allowed disabled:opacity-50">
                                 </div>
                             </div>
                             <!-- End Grid -->
@@ -52,14 +52,14 @@
                                     Email</label>
                                 <input type="email" name="hs-work-email-hire-us-2" id="hs-work-email-hire-us-2"
                                     placeholder="johndoe28@gmail.com" autocomplete="email"
-                                    class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50">
+                                    class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all disabled:cursor-not-allowed disabled:opacity-50">
                             </div>
 
                             <div>
                                 <label for="hs-about-hire-us-2"
                                     class="block mb-2 text-sm text-gray-700 font-medium s:text-white">Pesan</label>
                                 <textarea id="hs-about-hire-us-2" name="hs-about-hire-us-2" rows="4"
-                                    class="flex w-full h-auto min-h-[80px] px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 placeholder:text-neutral-400 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50"></textarea>
+                                    class="flex w-full h-auto min-h-[80px] px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 placeholder:text-neutral-400 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all disabled:cursor-not-allowed disabled:opacity-50"></textarea>
                             </div>
                         </div>
                         <!-- End Grid -->
@@ -71,10 +71,11 @@
                                     class="shrink-0 mt-1.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 s:bg-neutral-800 s:border-neutral-700 s:checked:bg-blue-500 s:checked:border-blue-500 s:focus:ring-offset-gray-800">
                             </div>
                             <div class="ms-3">
-                                <label for="remember-me" class="text-sm text-gray-600 s:text-neutral-400">Dengan
+                                <label for="remember-me"
+                                    class="text-sm text-gray-600 truncate s:text-neutral-400">Dengan
                                     mengirim formulir ini Saya telah menyetujui <a
                                         class="text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium s:text-blue-500"
-                                        href="#">Kebijakan Privasi</a></label>
+                                        href="/about#1">Kebijakan Privasi</a></label>
                             </div>
                         </div>
                         <!-- End Checkbox -->

@@ -4,11 +4,13 @@
         <div
             class="flex flex-col md:flex-row md:justify-between border-[1px] shadow-lg border-neutral-200/60 rounded-lg h-[32rem]">
             <div class="flex-1 p-4">
-                <textarea name="bookContent1" class="h-full border border-gray-600 p-4 rounded-lg overflow-scroll resize-none w-full"
+                <textarea name="bookContent1"
+                    class="h-full border border-gray-600 p-4 rounded-lg overflow-scroll resize-none w-full transition-all focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 "
                     placeholder="Ketik Konten Kiri Disini">{{ $data ? $data->book_content_1 : '' }}</textarea>
             </div>
             <div class="flex-1 p-4">
-                <textarea name="bookContent2" class="h-full border border-gray-600 p-4 rounded-lg overflow-scroll resize-none w-full"
+                <textarea name="bookContent2"
+                    class="h-full border border-gray-600 p-4 rounded-lg overflow-scroll resize-none w-full transition-all focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 "
                     placeholder="Ketik Konten Kanan Disini">{{ $data ? $data->book_content_2 : '' }}</textarea>
             </div>
         </div>
@@ -30,23 +32,24 @@
             </div>
 
             <div class="w-full max-w-xs mx-auto">
-                <input name="bookName" placeholder="Nama Buku" value="{{ $data ? $data->book_name : '' }}"
-                    type="text"
-                    class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50" />
+                <input name="bookName" placeholder="Nama Buku" maxlength="150"
+                    value="{{ $data ? $data->book_name : '' }}" type="text"
+                    class="flex w-full h-10 px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 ring-offset-background placeholder:text-neutral-500 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all disabled:cursor-not-allowed disabled:opacity-50" />
                 @error('bookName')
                     <span class="text-red-600 text-sm font-bold">{{ $message }}</span>
                 @enderror
             </div>
             <div class="w-full max-w-xs mx-auto">
                 <textarea type="text" name="bookDescription" placeholder="Deskripsi Buku"
-                    class="flex w-full h-auto min-h-[80px] px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 placeholder:text-neutral-400 focus:border-neutral-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50">{{ $data ? $data->book_description : '' }}</textarea>
+                    class="flex w-full h-auto min-h-[80px] px-3 py-2 text-sm bg-white border rounded-md border-neutral-300 placeholder:text-neutral-400 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all disabled:cursor-not-allowed disabled:opacity-50">{{ $data ? $data->book_description : '' }}</textarea>
                 @error('bookName')
                     <span class="text-red-600 text-sm font-bold">{{ $message }}</span>
                 @enderror
             </div>
             @if ($isCreate)
                 <div class="flex flex-col space-y-2">
-                    <input type="file" hidden name="book_cover_src" id="fileupload" class="w-full" />
+                    <input type="file" accept="image/*" hidden name="book_cover_src" id="fileupload"
+                        class="w-full" />
 
                     <div class="flex flex-col space-y-2 w-36">
                         <label for="fileupload"
@@ -57,7 +60,7 @@
                             class="w-full items-center justify-center px-3 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md bg-red-600 hover:bg-red-500 focus:ring-2 focus:ring-offset-2 focus:ring-red-500 focus:shadow-outline focus:outline-none hidden">Batalkan
                             Gambar</button>
                     </div>
-                    <span id="file-name" class="text-sm text-gray-600">Belum ada file gambar
+                    <span id="file-name" class="text-sm text-gray-600 truncate overflow">Belum ada file gambar
                         yang
                         dipilih.</span>
 
