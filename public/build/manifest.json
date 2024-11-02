@@ -1,68 +1,4 @@
 {
-  "inter-cyrillic-400-normal.woff": {
-    "file": "assets/inter-cyrillic-400-normal-ZzOtrSSW.woff",
-    "src": "inter-cyrillic-400-normal.woff"
-  },
-  "inter-cyrillic-400-normal.woff2": {
-    "file": "assets/inter-cyrillic-400-normal-BLGc9T1a.woff2",
-    "src": "inter-cyrillic-400-normal.woff2"
-  },
-  "inter-cyrillic-ext-400-normal.woff": {
-    "file": "assets/inter-cyrillic-ext-400-normal-BPnxn4xp.woff",
-    "src": "inter-cyrillic-ext-400-normal.woff"
-  },
-  "inter-cyrillic-ext-400-normal.woff2": {
-    "file": "assets/inter-cyrillic-ext-400-normal-Dc4VJyIJ.woff2",
-    "src": "inter-cyrillic-ext-400-normal.woff2"
-  },
-  "inter-greek-400-normal.woff": {
-    "file": "assets/inter-greek-400-normal-BZzXV7-1.woff",
-    "src": "inter-greek-400-normal.woff"
-  },
-  "inter-greek-400-normal.woff2": {
-    "file": "assets/inter-greek-400-normal-DxZsaF_h.woff2",
-    "src": "inter-greek-400-normal.woff2"
-  },
-  "inter-greek-ext-400-normal.woff": {
-    "file": "assets/inter-greek-ext-400-normal-DCpCPQOf.woff",
-    "src": "inter-greek-ext-400-normal.woff"
-  },
-  "inter-greek-ext-400-normal.woff2": {
-    "file": "assets/inter-greek-ext-400-normal-Bput3-QP.woff2",
-    "src": "inter-greek-ext-400-normal.woff2"
-  },
-  "inter-latin-400-normal.woff": {
-    "file": "assets/inter-latin-400-normal-gitzw0hO.woff",
-    "src": "inter-latin-400-normal.woff"
-  },
-  "inter-latin-400-normal.woff2": {
-    "file": "assets/inter-latin-400-normal-BOOGhInR.woff2",
-    "src": "inter-latin-400-normal.woff2"
-  },
-  "inter-latin-ext-400-normal.woff": {
-    "file": "assets/inter-latin-ext-400-normal-C1t-h-pH.woff",
-    "src": "inter-latin-ext-400-normal.woff"
-  },
-  "inter-latin-ext-400-normal.woff2": {
-    "file": "assets/inter-latin-ext-400-normal-hnt3BR84.woff2",
-    "src": "inter-latin-ext-400-normal.woff2"
-  },
-  "inter-vietnamese-400-normal.woff": {
-    "file": "assets/inter-vietnamese-400-normal-BUNmGMP1.woff",
-    "src": "inter-vietnamese-400-normal.woff"
-  },
-  "inter-vietnamese-400-normal.woff2": {
-    "file": "assets/inter-vietnamese-400-normal-DMkecbls.woff2",
-    "src": "inter-vietnamese-400-normal.woff2"
-  },
-  "library-login.jpg": {
-    "file": "assets/library-login-BvUJO-os.jpg",
-    "src": "library-login.jpg"
-  },
-  "library-regist.jpg": {
-    "file": "assets/library-regist-D-ONHast.jpg",
-    "src": "library-regist.jpg"
-  },
   "node_modules/@fontsource/inter/files/inter-cyrillic-400-normal.woff": {
     "file": "assets/inter-cyrillic-400-normal-ZzOtrSSW.woff",
     "src": "node_modules/@fontsource/inter/files/inter-cyrillic-400-normal.woff"
@@ -128,7 +64,7 @@
     "src": "public/library-regist.jpg"
   },
   "resources/css/app.css": {
-    "file": "assets/app-bpfRvqaP.css",
+    "file": "assets/app-BU2NZ7hU.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
